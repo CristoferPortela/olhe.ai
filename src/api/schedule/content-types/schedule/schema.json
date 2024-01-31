@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "schedules",
+  "info": {
+    "singularName": "schedule",
+    "pluralName": "schedules",
+    "displayName": "Schedule",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Type": {
+      "type": "enumeration",
+      "enum": [
+        "DAY",
+        "JOURNEY"
+      ],
+      "default": "DAY",
+      "required": true
+    },
+    "tolerance": {
+      "type": "integer",
+      "default": 0,
+      "min": 0
+    }
+  }
+}
