@@ -4,4 +4,6 @@
 
 import { factories } from '@strapi/strapi';
 
-export default factories.createCoreRouter('api::schedule-timing.schedule-timing' as never);
+export default factories.createCoreRouter('api::schedule-timing.schedule-timing', {
+  only: []
+});

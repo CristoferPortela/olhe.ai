@@ -2,6 +2,8 @@
  * schedule router
  */
 
-import { factories } from '@strapi/strapi';
+import {factories} from '@strapi/strapi';
 
-export default factories.createCoreRouter('api::schedule.schedule');
+export default factories.createCoreRouter('api::schedule.schedule', {
+  only: ['find', 'findOne'],
+});
