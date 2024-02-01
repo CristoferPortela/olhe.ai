@@ -28,6 +28,12 @@
       "type": "integer",
       "default": 0,
       "min": 0
+    },
+    "schedule_timings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::schedule-timing.schedule-timing",
+      "mappedBy": "parent_id"
     }
   }
 }
