@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "location_loggeds",
+  "info": {
+    "singularName": "location-logged",
+    "pluralName": "location-loggeds",
+    "displayName": "LocationLogged"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Location": {
+      "type": "customField",
+      "customField": "plugin::google-maps.location-picker"
+    }
+  }
+}

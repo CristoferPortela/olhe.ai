@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "schedule_timings",
+  "info": {
+    "singularName": "schedule-timing",
+    "pluralName": "schedule-timings",
+    "displayName": "ScheduleTiming"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Days": {
+      "type": "json",
+      "required": true
+    },
+    "Entrance": {
+      "type": "time"
+    },
+    "Exit": {
+      "type": "time"
+    },
+    "parent_id": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::schedule.schedule",
+      "inversedBy": "schedule_timings"
+    },
+    "scheduleintervals": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::scheduleinterval.scheduleinterval",
+      "mappedBy": "schedule_timing"
+    }
+  }
+}

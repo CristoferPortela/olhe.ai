@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "configurations",
+  "info": {
+    "singularName": "configuration",
+    "pluralName": "configurations",
+    "displayName": "Configuration",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Timezone": {
+      "type": "customField",
+      "required": true,
+      "customField": "plugin::timezone-select.timezone"
+    },
+    "CompanyName": {
+      "type": "string",
+      "required": true
+    },
+    "CNPJ": {
+      "type": "string",
+      "required": true,
+      "regex": "^\\d{2}\\.\\d{3}\\.\\d{3}\\/\\d{4}\\-\\d{2}$",
+      "maxLength": 17,
+      "unique": false
+    },
+    "CompanyLocation": {
+      "type": "customField",
+      "required": true,
+      "customField": "plugin::google-maps.location-picker"
+    }
+  }
+}

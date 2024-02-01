@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "work_histories",
+  "info": {
+    "singularName": "work-history",
+    "pluralName": "work-histories",
+    "displayName": "WorkHistory"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "employer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::employer.employer",
+      "inversedBy": "work_histories"
+    }
+  }
+}

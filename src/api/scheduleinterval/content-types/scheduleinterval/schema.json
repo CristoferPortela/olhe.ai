@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "scheduleintervals",
+  "info": {
+    "singularName": "scheduleinterval",
+    "pluralName": "scheduleintervals",
+    "displayName": "Scheduleinterval"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "schedule_timing": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::schedule-timing.schedule-timing",
+      "inversedBy": "scheduleintervals"
+    },
+    "Day": {
+      "type": "json",
+      "required": true
+    },
+    "AutomaticalyRegister": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "StartInterval": {
+      "type": "time",
+      "required": true
+    },
+    "ExitInterval": {
+      "type": "time",
+      "required": true
+    },
+    "Pay": {
+      "type": "boolean",
+      "required": true
+    }
+  }
+}

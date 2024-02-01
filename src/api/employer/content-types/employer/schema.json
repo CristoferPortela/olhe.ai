@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "employers",
+  "info": {
+    "singularName": "employer",
+    "pluralName": "employers",
+    "displayName": "Employer",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "CPF": {
+      "type": "string",
+      "regex": "/^\\d{3}\\.\\d{3}\\.\\d{3}\\-\\d{2}$/",
+      "required": true,
+      "unique": true,
+      "private": true
+    },
+    "UniqueIdentifier": {
+      "type": "integer",
+      "required": true,
+      "unique": true,
+      "max": 9999,
+      "min": 0,
+      "private": true
+    },
+    "work_histories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::work-history.work-history",
+      "mappedBy": "employer"
+    }
+  }
+}
