@@ -24,12 +24,12 @@
       "default": "DAY",
       "required": true
     },
-    "tolerance": {
+    "Tolerance": {
       "type": "integer",
       "default": 0,
       "min": 0
     },
-    "schedule_timings": {
+    "Schedule_timings": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::schedule-timing.schedule-timing",

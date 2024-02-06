@@ -11,12 +11,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "schedule_timing": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::schedule-timing.schedule-timing",
-      "inversedBy": "scheduleintervals"
-    },
     "Day": {
       "type": "json",
       "required": true
@@ -37,6 +31,12 @@
     "Pay": {
       "type": "boolean",
       "required": true
+    },
+    "schedule_timing": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::schedule-timing.schedule-timing",
+      "inversedBy": "Schedule_intervals"
     }
   }
 }

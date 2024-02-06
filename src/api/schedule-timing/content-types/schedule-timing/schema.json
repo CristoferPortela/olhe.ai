@@ -4,7 +4,8 @@
   "info": {
     "singularName": "schedule-timing",
     "pluralName": "schedule-timings",
-    "displayName": "ScheduleTiming"
+    "displayName": "ScheduleTiming",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -21,17 +22,17 @@
     "Exit": {
       "type": "time"
     },
-    "parent_id": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::schedule.schedule",
-      "inversedBy": "schedule_timings"
-    },
-    "scheduleintervals": {
+    "Schedule_intervals": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::scheduleinterval.scheduleinterval",
       "mappedBy": "schedule_timing"
+    },
+    "parent_id": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::schedule.schedule",
+      "inversedBy": "Schedule_timings"
     }
   }
 }

@@ -12,13 +12,9 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Name": {
-      "type": "string",
-      "required": true
-    },
     "CPF": {
       "type": "string",
-      "regex": "/^\\d{3}\\.\\d{3}\\.\\d{3}\\-\\d{2}$/",
+      "regex": "(\\d{3})\\.(\\d{3})\\.(\\d{3})\\-(\\d{2})",
       "required": true,
       "unique": true,
       "private": true
@@ -36,6 +32,27 @@
       "relation": "oneToMany",
       "target": "api::work-history.work-history",
       "mappedBy": "employer"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "Avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Photos": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }
