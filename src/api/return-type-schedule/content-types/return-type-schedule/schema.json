@@ -1,0 +1,45 @@
+{
+  "kind": "singleType",
+  "collectionName": "return_type_schedules",
+  "info": {
+    "singularName": "return-type-schedule",
+    "pluralName": "return-type-schedules",
+    "displayName": "ReturnTypeSchedule"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Entrance": {
+      "type": "time",
+      "required": true
+    },
+    "Exit": {
+      "type": "time"
+    },
+    "Type": {
+      "type": "enumeration",
+      "enum": [
+        "DAY",
+        "JOURNEY"
+      ],
+      "required": true,
+      "default": "DAY"
+    },
+    "Days": {
+      "type": "json",
+      "required": false
+    },
+    "notValidateTotalHours": {
+      "type": "boolean"
+    },
+    "Tolerance_time": {
+      "type": "integer"
+    }
+  }
+}

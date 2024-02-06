@@ -1,0 +1,7 @@
+/**
+ * return-type-schedule router
+ */
+
+import { factories } from '@strapi/strapi';
+
+export default factories.createCoreRouter('api::return-type-schedule.return-type-schedule');
